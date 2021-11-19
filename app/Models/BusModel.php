@@ -24,6 +24,15 @@ class BusModel extends Model
         'jumlah_kursi',
     ];
 
+    public function getLatestID()
+    {
+        $data = $this->select('id_bus')->orderBy('id_bus', 'desc')->limit(1)->first();
+        if (!is_null($data)) {
+            return $data;
+        }
+        return null;
+    }
+
     //untuk dapetin data bus
     public function getData($pk = false)
     {

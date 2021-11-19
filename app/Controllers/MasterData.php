@@ -51,11 +51,4 @@ class MasterData extends BaseController
 
         return view('admin/daftar_pemesanan', $alldata);
     }
-
-    public function regisbus()
-    {
-        $alldata = ['datas' => $this->bus->getData()];
-
-        return view('admin/registrasi_bus', $alldata);
-    }
 }
