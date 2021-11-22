@@ -13,6 +13,7 @@ class Pemesanan extends BaseController
 
     public function prosespesan()
     {
+        // dd($this->request->getVar('id_pemesanan'));
         $this->pesan->save([
             'id_pemesanan' => $this->request->getVar('id_pemesanan'),
             'waktu_reservasi' => $this->request->getVar('waktu_reservasi'),
