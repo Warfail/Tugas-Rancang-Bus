@@ -22,43 +22,46 @@
     <div class="panel panel-default">
       <div class="row g-2">
         <div class="col-md-12, text-center">
-          <h1>Registrasi Bus</h1>
+          <h1>Tambah Bus</h1>
           <hr>
         </div>
       </div>
 
       <div class="container">
-        <form action="" method="POST">
-          <div class="form-group">
+        <form action="../../RegistrasiBus/regisbus" method="POST">
+          <div class="mb-3">
             <label for="kode">ID Bus:</label>
-            <input type="text" class="form-control" name="id_bus" placeholder="ID bus" required="" value="<?= substr($datas2['id_bus'], 0, 4) . str_pad((int)substr($datas2['id_bus'], 5) + 1, 5, '0', STR_PAD_LEFT); ?> " disabled>
+            <input type="text" class="form-control" name="id_bus" placeholder="ID bus" required value="<?= substr($datas2['id_bus'], 0, 4) . str_pad((int)substr($datas2['id_bus'], 5) + 1, 5, '0', STR_PAD_LEFT); ?> " disabled>
           </div>
-          <div class=" form-group">
+          <div class="mb-3">
             <label for="nama">Nama Bus:</label>
-            <input type="text" class="form-control" name="nama" placeholder="nama bus" required="">
+            <input type="text" class="form-control" name="nama" placeholder="nama bus" required>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="berangkat">Jam Berangkat</label>
-            <input type="time/date" class="form-control" name="berangkat" placeholder="jam keberangkatan" required="">
+            <input type="datetime-local" class="form-control" name="berangkat" placeholder="jam keberangkatan" required>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="tiba">Jam Tiba:</label>
-            <input type="time/date" class="form-control" name="tiba" placeholder="jam tiba" required="">
+            <input type="datetime-local" class="form-control" name="tiba" placeholder="jam tiba" required>
+          </div>
+          <div class="mb-3">
             <label for="dari">Dari:</label>
-            <input type="text" class="form-control" name="dari" placeholder="lokasi penjemputan" required="">
+            <input type="text" class="form-control" name="dari" placeholder="lokasi penjemputan" required>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="ke">Ke:</label>
-            <input type="text" class="form-control" name="ke" placeholder="Arah Destinasi" required="">
+            <input type="text" class="form-control" name="ke" placeholder="Arah Destinasi" required>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="HargaTiket">Harga Tiket</label>
-            <input type="Number" class="form-control" name="HargaTiket" placeholder="Harga tiket" required="">
+            <input type="Number" class="form-control" name="HargaTiket" placeholder="Harga tiket" required>
           </div>
-          <div class="form-group">
+          <div class="mb-3">
             <label for="kursi">Jumlah Kursi:</label>
-            <input type="Number" class="form-control" name="Kursi" placeholder="status lowongan" required="">
-            <input type="submit" name="submit" class="btn btn-primary" style="float:right;" value="Submit">
+            <input type="Number" class="form-control" name="Kursi" placeholder="status lowongan" required>
+          </div>
+          <input type="submit" name="submit" class="btn btn-primary" style="float:right;" value="Submit">
         </form>
       </div>
     </div>
