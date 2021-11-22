@@ -154,7 +154,7 @@
 							<svg class="bi me-2" width="16" height="16">
 								<use xlink:href="#man" />
 							</svg>
-							Registrasi
+							Tambah Bus
 						</a>
 					</li>
 					<!-- <li>

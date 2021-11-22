@@ -19,7 +19,7 @@ class Pages extends BaseController
             $alldata2['datas2'] = ['id_pemesanan' => 'R000000'];
         }
         // dd(array_merge($alldata, $alldata2));
-        return view('user/daftar_pesanan', array_merge($alldata, $alldata2));
+        return view('user/form_pesan', array_merge($alldata, $alldata2));
     }
 
     public function userpesan()

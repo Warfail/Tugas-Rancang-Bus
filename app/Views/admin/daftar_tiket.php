@@ -23,45 +23,48 @@
     <!-- <br> -->
 
     <br>
-    <div class="row" style="width:100%">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="row g-2">
-                    <div class="col-md-12">
-                        <h1>Daftar Tiket</h1>
-                        <hr>
+    <div class="container">
+        <div class="row" style="width:100%">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="row g-2">
+                        <div class="col-md-12">
+                            <h1>Daftar Tiket</h1>
+                            <hr>
+                        </div>
                     </div>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <table id="table-data" class="table table-hover table-striped" style="width:100%">
-                                <thead>
-                                    <th>ID Tiket</th>
-                                    <th>ID Pemesanan</th>
-                                    <th>Status</th>
-                                    <th>No Duduk</th>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($datas as $data) : ?>
-                                        <tr>
-                                            <td><?= $data['id_tiket']; ?></td>
-                                            <td><?= $data['id_pemesanan']; ?></td>
-                                            <td><?= $data['status']; ?></td>
-                                            <td><?= $data['no_duduk']; ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                    <div class="panel-body">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <table id="table-data" class="table table-hover table-striped" style="width:100%">
+                                    <thead>
+                                        <th>ID Tiket</th>
+                                        <th>ID Pemesanan</th>
+                                        <th>Status</th>
+                                        <th>No Duduk</th>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $data) : ?>
+                                            <tr>
+                                                <td><?= $data['id_tiket']; ?></td>
+                                                <td><?= $data['id_pemesanan']; ?></td>
+                                                <td><?= $data['status']; ?></td>
+                                                <td><?= $data['no_duduk']; ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
     <!--/.Content-->
 
     <!-- script-->
