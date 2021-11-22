@@ -28,4 +28,11 @@ class Pages extends BaseController
 
         return view('user/pesan_bus', $alldata);
     }
+
+    public function userdaftarpesan()
+    {
+        //$alldata = ['datas' => $this->pesan->getData()];
+
+        return view('user/daftar_pesanan');
+    }
 }

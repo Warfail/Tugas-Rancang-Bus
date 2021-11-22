@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pesan Bus</title>
+    <title>Daftar Pemesanan</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
                 <div class="panel panel-default">
                     <div class="row g-2">
                         <div class="col-md-12">
-                            <h1>Pesan Bus</h1>
+                            <h1>Daftar Pesanan</h1>
                             <hr>
                         </div>
                     </div>
@@ -40,35 +40,13 @@
                             <div class="col-lg-12">
                                 <table id="table-data" class="table table-hover table-striped" style="width:100%">
                                     <thead>
+                                        <th>ID Pemesanan</th>
+                                        <th>Waktu Reservasi</th>
+                                        <th>Jumlah</th>
                                         <th>ID Bus</th>
-                                        <th>Nama Bus</th>
-                                        <th>Jam Berangkat</th>
-                                        <th>Jam Tiba</th>
-                                        <th>Dari</th>
-                                        <th>Ke</th>
-                                        <th>Harga Tiket</th>
-                                        <th>Jumlah Kursi</th>
-                                        <th>Pesan</th>
+                                        <th>Total Bayar</th>
+                                        <th>Status Pembayaran</th>
                                     </thead>
-                                    <tbody>
-                                        <?php foreach ($datas as $data) : ?>
-                                            <tr>
-                                                <td><?= $data['id_bus']; ?></td>
-                                                <td><?= $data['nama_bus']; ?></td>
-                                                <td><?= $data['jam_berangkat']; ?></td>
-                                                <td><?= $data['jam_tiba']; ?></td>
-                                                <td><?= $data['dari']; ?></td>
-                                                <td><?= $data['ke']; ?></td>
-                                                <td><?= $data['harga_tiket']; ?></td>
-                                                <td><?= $data['jumlah_kursi']; ?></td>
-                                                <td>
-                                                    <a href="../Pages/formpesan/<?= $data['id_bus']; ?>">
-                                                        <button>Pesan</button>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
                                 </table>
                             </div>
                         </div>
