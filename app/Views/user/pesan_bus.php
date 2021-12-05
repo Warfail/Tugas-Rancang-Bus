@@ -63,7 +63,7 @@
                                                 <td><?= $data['jumlah_kursi']; ?></td>
                                                 <td>
                                                     <a href="../Pages/formpesan/<?= $data['id_bus']; ?>">
-                                                        <button>Pesan</button>
+                                                        <button class="btn btn-primary">Pesan</button>
                                                     </a>
                                                 </td>
                                             </tr>

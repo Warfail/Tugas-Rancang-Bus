@@ -15,6 +15,15 @@ class MasterData extends BaseController
         $this->penumpang = new \App\Models\PenumpangModel();
         $this->bayar = new \App\Models\UserBayarModel();
         $this->pesan = new \App\Models\UserPesanModel();
+        $this->db = \Config\Database::connect();
+    }
+
+    public function getKey()
+    {
+        //return kode toko
+        $this->db->reconnect();
+        $query = $this->db->query("SELECT username AS kunci FROM masterdata_bus WHERE id=id_bus");
+        return '' . $query->getResultArray()[0]['kunci'];
     }
 
     public function daftarbus()
@@ -22,6 +31,21 @@ class MasterData extends BaseController
         $alldata = ['datas' => $this->bus->getData()];
 
         return view('admin/daftar_bus', $alldata);
+    }
+
+    public function deleteBus($data)
+    {
+        $this->bus->delete($data);
+        $alldata = ['datas' => $this->bus->getData()];
+
+        return view('admin/daftar_bus', $alldata);
+    }
+
+    public function updateBus($data)
+    {
+        //ambil data tertuju
+        $updateData = ['datas' => $this->bus->getDataBus($data, $this->getKey())];
+        return view('admin/edit_bus', $updateData);
     }
 
     public function daftartiket()

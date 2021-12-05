@@ -33,6 +33,17 @@ class BusModel extends Model
         return null;
     }
 
+    public function getDataBus($pk = false, $kunci = false)
+    {
+        //ngembaliin semua data
+        if ($pk == false) {
+            return $this->where(['id_bus' => $kunci])->findAll();
+        }
+
+        //ngembaliin data khusus
+        return $this->where(['id_bus' => $pk])->first();
+    }
+
     //untuk dapetin data bus
     public function getData($pk = false)
     {

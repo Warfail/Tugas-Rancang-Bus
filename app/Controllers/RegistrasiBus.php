@@ -34,5 +34,6 @@ class RegistrasiBus extends BaseController
             'harga_tiket' => $this->request->getVar('harga_tiket'),
             'jumlah_kursi' => $this->request->getVar('jumlah_kursi'),
         ]);
+        return redirect()->to('/admin/daftar_bus');
     }
 }

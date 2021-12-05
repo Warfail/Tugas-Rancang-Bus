@@ -18,6 +18,7 @@ class UserPesanModel extends Model
         'waktu_reservasi',
         'jumlah',
         'id_bus',
+        'username',
     ];
 
     public function getLatestID()
@@ -39,5 +40,29 @@ class UserPesanModel extends Model
 
         //ngembaliin data khusus
         return $this->where(['id_pemesanan' => $pk])->first();
+    }
+
+    public function getDataPesan($pk = false, $id = false)
+    {
+        //ngembaliin semua data
+        if ($pk == false) {
+            $data = $this
+                ->select('*')
+                ->findAll();
+            if (!is_null($data)) {
+                return $data;
+            }
+            return null;
+        }
+
+        //ngembaliin data khusus
+        $data = $this
+            ->select('*')
+            ->where(['pemesanan.username' => $pk])
+            ->findAll();
+        if (!is_null($data)) {
+            return $data;
+        }
+        return null;
     }
 }

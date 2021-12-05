@@ -12,6 +12,7 @@
 <body>
     <div class="container">
         <h1>Daftar Pesanan Bus</h1>
+        <hr>
         <form action="../../Pemesanan/prosespesan" method="post">
             <div class="mb-3">
                 <label for="formGroupExampleInput" class="form-label">ID Pemesanan</label>
@@ -34,6 +35,7 @@
                 <label for="formGroupExampleInput2" class="form-label">Total Bayar</label>
                 <input type="text" name="total_bayar" class="form-control" id="total_bayar" placeholder="Another input placeholder">
             </div>
+            <input type="hidden" name="username" class="form-control" id="username" placeholder="<?= user_id() ?>" value="<?= user_id() ?>">
             <input type="submit" value="Pesan sekarang">
         </form>
     </div>

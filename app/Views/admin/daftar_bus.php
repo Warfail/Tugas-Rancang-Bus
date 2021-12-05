@@ -47,6 +47,7 @@
                                         <th>Ke</th>
                                         <th>Harga Tiket</th>
                                         <th>Jumlah Kursi</th>
+                                        <th>Aksi</th>
                                     </thead>
                                     <tbody>
                                         <?php foreach ($datas as $data) : ?>
@@ -59,6 +60,20 @@
                                                 <td><?= $data['ke']; ?></td>
                                                 <td><?= $data['harga_tiket']; ?></td>
                                                 <td><?= $data['jumlah_kursi']; ?></td>
+                                                <td>
+                                                    <div class="col-3">
+                                                        <a href="/masterdata/updateBus/<?= $data['id_bus']; ?>">
+                                                            <button class="btn btn-success btn-sm mb-2 col-auto">Edit</button>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <!--http spoofing untuk DELETE-->
+                                                        <form action="/masterdata/deleteBus/<?= $data['id_bus']; ?>" method="post">
+                                                            <?= csrf_field(); ?>
+                                                            <input type="hidden" name="_method" value="DELETE">
+                                                            <button type="submit" class="btn btn-danger btn-sm col-auto" onclick="return confirm('Yakin Mau Hapus?')">Delete</button>
+                                                        </form>
+                                                </td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

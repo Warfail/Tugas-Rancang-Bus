@@ -47,6 +47,22 @@
                                         <th>Total Bayar</th>
                                         <th>Status Pembayaran</th>
                                     </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $data) : ?>
+                                            <tr>
+                                                <td><?= $data['id_pemesanan']; ?></td>
+                                                <td><?= $data['waktu_reservasi']; ?></td>
+                                                <td><?= $data['jumlah']; ?></td>
+                                                <td><?= $data['id_bus']; ?></td>
+                                                <td>total</td>
+                                                <td>
+                                                    <a href="#">
+                                                        <button class="btn btn-success">Bayar</button>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
