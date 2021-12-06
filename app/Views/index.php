@@ -102,7 +102,7 @@
 			<ul class="nav nav-pills flex-column mb-auto">
 				<?php if (in_groups('admin')) : ?>
 					<li class="nav-item">
-						<a href="#" class="nav-link text-white" aria-current="page">
+						<a href="Pages/welcome" target="iframe_a" class="nav-link text-white" aria-current="page">
 							<svg class="bi me-2" width="16" height="16">
 								<use xlink:href="#home" />
 							</svg>
@@ -157,14 +157,6 @@
 							Tambah Bus
 						</a>
 					</li>
-					<!-- <li>
-					<a href="#" class="nav-link text-white">
-						<svg class="bi me-2" width="16" height="16">
-							<use xlink:href="#people-circle" />
-						</svg>
-						Customers
-					</a>
-				</li> -->
 				<?php endif; ?>
 				<?php if (in_groups('user')) : ?>
 					<li>
@@ -204,13 +196,7 @@
 		</div>
 
 		<div class="b-example-divider"></div>
-		<?php
-		if (in_groups('admin')) {
-			echo '<iframe src="MasterData/daftarbus" name="iframe_a" height="auto" width="98%"></iframe>';
-		} else if (in_groups('user')) {
-			echo '<iframe src="Pages/userpesan" name="iframe_a" height="auto" width="98%"></iframe>';
-		}
-		?>
+		<iframe src="Pages/welcome" name="iframe_a" height="auto" width="98%"></iframe>
 
 	</main>
 

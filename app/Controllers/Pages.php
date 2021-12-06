@@ -35,4 +35,10 @@ class Pages extends BaseController
 
         return view('user/daftar_pesanan');
     }
+
+    public function welcome()
+    {
+
+        return view('welcome');
+    }
 }

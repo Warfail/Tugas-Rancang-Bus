@@ -22,7 +22,7 @@ class MasterData extends BaseController
     {
         //return kode toko
         $this->db->reconnect();
-        $query = $this->db->query("SELECT username AS kunci FROM masterdata_bus WHERE id=id_bus");
+        $query = $this->db->query("SELECT id_bus AS kunci FROM masterdata_bus WHERE id_bus=");
         return '' . $query->getResultArray()[0]['kunci'];
     }
 
@@ -41,10 +41,10 @@ class MasterData extends BaseController
         return view('admin/daftar_bus', $alldata);
     }
 
-    public function updateBus($data)
+    public function updateBus($datas2)
     {
         //ambil data tertuju
-        $updateData = ['datas' => $this->bus->getDataBus($data, $this->getKey())];
+        $updateData = ['datas2' => $this->bus->getData($datas2)];
         return view('admin/edit_bus', $updateData);
     }
 

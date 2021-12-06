@@ -53,7 +53,7 @@
                     <input type="Number" class="form-control" name="jumlah_kursi" placeholder="status lowongan" required>
                 </div>
             </div>
-            <input type="submit" value="Tambah bus">
+            <input type="submit" class="btn btn-primary" value="Simpan">
         </form>
     </div>
 
